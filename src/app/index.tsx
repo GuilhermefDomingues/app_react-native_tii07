@@ -21,7 +21,7 @@ class App extends Component{
                </View>
                <View style={styles.bloco1}>
                     <Text style={styles.text1}>Filmes, Séries e muito mais, sem limites</Text>
-                    <Text style={styles.text}>Assista onde quiser. Cancele quando quiser.</Text>
+                    <Text style={styles.text}>Assista onde quiser, Cancele quando quiser.</Text>
                     <Text style={styles.text}>Quer assistir? Informe seu email para criar ou reiniciar sua assinatura.</Text>
                     <TextInput
                         placeholder='Digite Seu Email...'
