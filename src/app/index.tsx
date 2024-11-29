@@ -1,20 +1,23 @@
 import React, { Component} from "react";
 import { SafeAreaView, View, Text, Button, TouchableOpacity, Image, TextInput, ImageBackground, } from "react-native";
-import styles from "./assets/styles/styles_Tela_Zero";
+import styles from "../../assets/styles/styles_Tela_Zero";
+import { Link } from "expo-router";
 
 class App extends Component{
     render(){
         return(
             <SafeAreaView style={styles.container}>
-                <ImageBackground source={require('./assets/images/Group 1.png')} resizeMode="cover" style={styles.image}/>
+                <ImageBackground source={require('../../assets/images/Group 1.png')} resizeMode="cover" style={styles.image}/>
                <View style={styles.header}>
                 <Image
-                    source={require('./assets/images/logo 1.png')}
+                    source={require('../../assets/images/logo 1.png')}
                     style={styles.logo}
                     />
-                <TouchableOpacity style={styles.botao}>
-                    <Text>Entrar</Text>
-                </TouchableOpacity>
+                <Link href="/Login" asChild>
+                    <TouchableOpacity style={styles.botao}>
+                        <Text>Entrar</Text>
+                    </TouchableOpacity>
+                </Link>
                </View>
                <View style={styles.bloco1}>
                     <Text style={styles.text1}>Filmes, Séries e muito mais, sem limites</Text>
@@ -24,9 +27,11 @@ class App extends Component{
                         placeholder='Digite Seu Email...'
                         style={styles.input_email}
                     />
-                    <TouchableOpacity style={styles.botao_cadastrar}>
-                        <Text>Cadastrar</Text>
-                    </TouchableOpacity>
+                    <Link href="/cadastrar" asChild>
+                        <TouchableOpacity style={styles.botao_cadastrar}>
+                            <Text>Cadastrar</Text>
+                        </TouchableOpacity>
+                    </Link>
                </View>
                <View style={styles.bloco2}>
                     <Text style={styles.text1}>Assista na sua TV!</Text>

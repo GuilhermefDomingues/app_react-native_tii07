@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import { StyleSheet, SafeAreaView, TouchableOpacity, TextInput, Text, View, Image, ImageBackground } from 'react-native';
-import styles from './assets/styles/styles_Login';
+import styles from '../../assets/styles/styles_Login';
+import { Link } from "expo-router";
 
 
 class App extends Component{
   render(){
     return(
       <SafeAreaView style={styles.container}>
-        <ImageBackground source={require('./assets/images/fundo 1.jpg')} resizeMode="cover" style={styles.image}/>
+        <ImageBackground source={require('../../assets/images/fundo 1.jpg')} resizeMode="cover" style={styles.image}/>
         <View>
             <Image
-              source={require('./assets/images/logo 1.png')}
+              source={require('../../assets/images/logo 1.png')}
               style={styles.logo_topo}
             />
         </View>
@@ -34,6 +35,11 @@ class App extends Component{
             <TouchableOpacity style={styles.botao_login}>
                 <Text>Entrar</Text>
             </TouchableOpacity>
+            <View>
+              <Link href="/Recuperar-Senha" asChild>
+                <Text>Recuperar Senha</Text>
+              </Link>
+            </View>
         </View>
       </SafeAreaView>
     );
